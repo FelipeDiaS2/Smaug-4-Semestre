@@ -2,25 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [Header("Components:")]
     [SerializeField] private Rigidbody rb;
+    
+   
     [Header("Physics:")]
-    [SerializeField] private float speed, jumpForce, brake, friction;
-
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
+   
     private Vector2 moveInput;
 
+    private Item[] item;
+    private InventoryManager inventoryManager;
 
     void Start()
     {
-        
+
     }
 
     
     void Update()
     {
-        
+    
     }
 
     private void FixedUpdate()
@@ -38,5 +43,4 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-
 }
