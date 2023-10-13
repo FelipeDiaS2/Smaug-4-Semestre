@@ -4,24 +4,37 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
-
     public InventoryManager inventoryManager;
     public Item item;
 
+    [SerializeField] private GameObject buttonPress;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            bool canAdd = inventoryManager.instance.AddItem(item);
+            buttonPress.gameObject.SetActive(true);
 
-            if (canAdd == true)
+            if (Input.GetKey(KeyCode.F))
             {
-                Destroy(gameObject);
-                print("colidiu");
+                bool canAdd = inventoryManager.instance.AddItem(item);
+
+                if (canAdd == true)
+                {
+                    Destroy(gameObject);
+                    print("coletou");
+                }
             }
+
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        buttonPress.gameObject.SetActive(false);
+    }
 
 }
+
+
+
