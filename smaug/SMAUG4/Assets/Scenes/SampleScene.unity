@@ -1197,6 +1197,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4972672969907284485, guid: 175656dd286a363498a712d71d6d632e, type: 3}
+      propertyPath: selectedColor.b
+      value: 0.6745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972672969907284485, guid: 175656dd286a363498a712d71d6d632e, type: 3}
+      propertyPath: selectedColor.g
+      value: 0.6745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972672969907284485, guid: 175656dd286a363498a712d71d6d632e, type: 3}
+      propertyPath: selectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972672969907284485, guid: 175656dd286a363498a712d71d6d632e, type: 3}
+      propertyPath: notSelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972672969907284485, guid: 175656dd286a363498a712d71d6d632e, type: 3}
+      propertyPath: notSelectedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972672969907284485, guid: 175656dd286a363498a712d71d6d632e, type: 3}
+      propertyPath: notSelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8446968980747370058, guid: 175656dd286a363498a712d71d6d632e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2639,6 +2663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe111c74cdedf34b96c7a1e69208880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxStackedItem: 5
   instance: {fileID: 0}
   inventoryItemPrefab: {fileID: 2314455157556683861, guid: d5951f92e99a99843a433d16dd457525, type: 3}
   inventorySlots:

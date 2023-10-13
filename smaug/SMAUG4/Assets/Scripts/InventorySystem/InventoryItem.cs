@@ -1,23 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class InvetoryItem: MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    
-
     [Header("UI")]
     public Image image;
+    public TMP_Text stackCount;
 
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public Item item;
+    [HideInInspector] public int count = 1;
 
     public void InitializeItem(Item newItem)
     {
         item = newItem;
         image.sprite = newItem.image;
+        RefreshCount();
+    }
+
+    public void RefreshCount()
+    {
+        stackCount.text = count.ToString();
+        bool textActive = count > 1;
+        stackCount.gameObject.SetActive(textActive);
     }
 
     //Drag and drop

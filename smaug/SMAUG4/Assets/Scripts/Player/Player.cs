@@ -14,9 +14,6 @@ public class Player : MonoBehaviour
    
     private Vector2 moveInput;
 
-    private Item[] item;
-    private InventoryManager inventoryManager;
-
     void Start()
     {
 

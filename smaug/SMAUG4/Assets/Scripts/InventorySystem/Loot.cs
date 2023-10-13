@@ -18,10 +18,8 @@ public class Loot : MonoBehaviour
             if (canAdd == true)
             {
                 Destroy(gameObject);
-                print("colidiu");
             }
         }
     }
-
 
 }
