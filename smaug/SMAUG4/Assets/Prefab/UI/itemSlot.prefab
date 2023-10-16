@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 2269336611219976386}
   selectedColor: {r: 1, g: 0.6273585, b: 0.6273585, a: 1}
-  notSelectedColor: {r: 1, g: 0.9065167, b: 0.7311321, a: 1}
+  notSelectedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &4713119480555055742
 PrefabInstance:
   m_ObjectHideFlags: 0
