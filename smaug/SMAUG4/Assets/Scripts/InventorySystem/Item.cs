@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 public class Item : ScriptableObject
 {
     //public TileBase Tile;
+    public string name;
     public Sprite image;
     //public ItemType item;
     //public ActionType action;
