@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CraftingStation : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class CraftingStation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //TODO fix em não abrir o menu quando estiver no craft e fechar craft ui no mesmo botão
@@ -27,12 +28,12 @@ public class CraftingStation : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(Input.GetKey(KeyCode.F)) 
-            { 
+            if (Input.GetKey(KeyCode.F))
+            {
                 craftStation.gameObject.SetActive(true);
                 mainInventoryGroup.gameObject.SetActive(true);
                 mainInventory.anchoredPosition = new Vector3(-352, 44, 0);
-                
+
             }
         }
     }
