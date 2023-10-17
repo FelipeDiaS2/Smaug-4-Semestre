@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d632399510f98ec4a8325378ecbde0f9, type: 3}
   m_Name: GreenSword
   m_EditorClassIdentifier: 
-  name: GreenSword
+  name: greensword
   image: {fileID: 2093660791, guid: b06bf0dfd241c8f4b83b855f0b5222bc, type: 3}
   stackable: 0
