@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject mainInventory;
+    [SerializeField] private GameObject craftStation;
 
     void Start()
     {
@@ -22,10 +23,12 @@ public class MenuManager : MonoBehaviour
 
     void InventoryUi()
     {
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (!craftStation.gameObject.activeSelf) 
         {
-            mainInventory.gameObject.SetActive(!mainInventory.gameObject.activeSelf);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                mainInventory.gameObject.SetActive(!mainInventory.gameObject.activeSelf);
+            }
         }
     }
 }
