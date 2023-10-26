@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     
    
     [Header("Physics:")]
-    [SerializeField] private float speed;
+    public float speed;
     [SerializeField] private float jumpForce;
    
     private Vector2 moveInput;
