@@ -17,13 +17,7 @@ public class Loot : MonoBehaviour
 
             if (Input.GetKey(KeyCode.F))
             {
-                bool canAdd = inventoryManager.instance.AddItem(item);
-
-                if (canAdd == true)
-                {
-                    Destroy(gameObject);
-                    print("coletou");
-                }
+                CollectItem();
             }
 
         }
@@ -33,6 +27,26 @@ public class Loot : MonoBehaviour
     {
         buttonPress.gameObject.SetActive(false);
     }
+
+    private void CollectItem()
+    {
+        bool canAdd = inventoryManager.instance.AddItem(item);
+
+        if (canAdd == true)
+        {
+            Destroy(gameObject);
+        }
+
+        if (item.name == "pickaxe")
+        {
+            QuestManager.questManager.AddQuestItem("Collect an item", 1);
+        }
+        else
+        {
+            return;
+        }
+    }
+
 
 }
 
