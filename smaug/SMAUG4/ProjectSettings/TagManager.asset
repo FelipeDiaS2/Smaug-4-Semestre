@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Item
   - item
+  - Coin
+  - completeButton
+  - acceptButton
   layers:
   - Default
   - TransparentFX
