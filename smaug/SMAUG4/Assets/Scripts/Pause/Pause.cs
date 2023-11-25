@@ -14,9 +14,9 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Escape)) 
+        if(Input.GetKeyDown(KeyCode.Escape))
         { 
-            if (IsPaused) 
+            if (IsPaused)
             {
                 ResumeGame();
             }
