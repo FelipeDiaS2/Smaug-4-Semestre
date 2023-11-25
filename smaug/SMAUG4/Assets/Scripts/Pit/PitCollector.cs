@@ -6,13 +6,14 @@ public class PitCollector : MonoBehaviour
 {
     private bool pit = false;
     private static bool hasGot = false;
+    public AudioSource ColetandoAguaSFX;
 
     void Update()
     {
         if (!hasGot && pit && Input.GetKeyDown(KeyCode.E))
         {
-            
             hasGot = true;
+            ColetandoAguaSFX.Play();
         }
     }
 

@@ -6,6 +6,9 @@ public class Colheita : MonoBehaviour
 {
     private bool planting = false;
     private static bool hasGot = false;
+    public AudioSource ColhendoSFX;
+
+    private static bool canPlayAudio = true;
 
     void Update()
     {
@@ -13,6 +16,13 @@ public class Colheita : MonoBehaviour
         {
             gameObject.SetActive(false);
             hasGot = true;
+
+            if (canPlayAudio)
+            {
+                ColhendoSFX.Play();
+                canPlayAudio = false;
+            }
+
         }
     }
 
