@@ -25,7 +25,7 @@ public class MenuManager : MonoBehaviour
     {
         if (!craftStation.gameObject.activeSelf) 
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 mainInventory.gameObject.SetActive(!mainInventory.gameObject.activeSelf);
             }

@@ -9,7 +9,7 @@ public class PitCollector : MonoBehaviour
 
     void Update()
     {
-        if (!hasGot && pit && Input.GetKeyDown(KeyCode.P))
+        if (!hasGot && pit && Input.GetKeyDown(KeyCode.E))
         {
             
             hasGot = true;

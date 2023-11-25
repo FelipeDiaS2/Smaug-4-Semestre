@@ -9,7 +9,7 @@ public class Colheita : MonoBehaviour
 
     void Update()
     {
-        if (!hasGot && planting && Input.GetKeyDown(KeyCode.P))
+        if (!hasGot && planting && Input.GetKeyDown(KeyCode.E))
         {
             gameObject.SetActive(false);
             hasGot = true;

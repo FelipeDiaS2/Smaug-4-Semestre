@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     private Item[] item;
     private InventoryManager inventoryManager;
 
+    public Animator animator;
+
     void Start()
     {
 
