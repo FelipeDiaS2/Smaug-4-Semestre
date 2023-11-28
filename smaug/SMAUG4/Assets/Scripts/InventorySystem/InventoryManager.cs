@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public int maxStackedItem = 5;
+    public int maxStackedItem = 3;
     public InventoryManager instance;
 
     public GameObject inventoryItemPrefab;
@@ -16,6 +16,7 @@ public class InventoryManager : MonoBehaviour
     public void Awake()
     {
         instance = this;
+        ChangeSelectedSlots(0);
     }
 
     public void Update()
@@ -60,7 +61,6 @@ public class InventoryManager : MonoBehaviour
 
         inventorySlots[newValue].Select();
         selectedSlot = newValue;
-
     }
 
     public bool AddItem(Item item)
@@ -99,8 +99,15 @@ public class InventoryManager : MonoBehaviour
         inventoryItem.InitializeItem(item);
     }
 
+    public string SelectItem()
+    {
+        InventorySlot slot = inventorySlots[selectedSlot];
+        InvetoryItem itemInSlot = slot.GetComponentInChildren<InvetoryItem>();
+        return itemInSlot.item.name;
+    }
+
     // Saber qual item estamos selecioando para utilizar
-    public Item GetSelectedItem(bool use)
+   public Item GetSelectedItem(bool use)
     {
         InventorySlot slot = inventorySlots[selectedSlot];
         InvetoryItem itemInSlot = slot.GetComponentInChildren<InvetoryItem>();
@@ -133,7 +140,8 @@ public class InventoryManager : MonoBehaviour
     }
 
     //TODO USAR ITEM
-    /*public void UseSelectedItem()
+    /*
+    public void UseSelectedItem()
     {
         Item receivedItem = inventoryManager.GetSelectedItem(true);
 
@@ -143,6 +151,7 @@ public class InventoryManager : MonoBehaviour
             if (Input.GetKeyDown("KeyCode.U"))
                 print("");
         }
+
     }*/
 }
 

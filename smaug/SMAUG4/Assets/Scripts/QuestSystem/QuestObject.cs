@@ -15,6 +15,7 @@ public class QuestObject : MonoBehaviour
 
     public Sprite questAvailableSprite;
     public Sprite questReceivableSprite;
+    public Sprite questCompleteSprite;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class QuestObject : MonoBehaviour
         if (QuestManager.questManager.CheckCompletedQuets(this))
         {
             questMarker.SetActive(true);
-            image.sprite = questReceivableSprite;
+            image.sprite = questCompleteSprite;
             image.color = Color.yellow;
         }
         else if (QuestManager.questManager.CheckAvailableQuets(this))

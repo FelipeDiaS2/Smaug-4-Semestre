@@ -61,6 +61,6 @@ public class CraftingStation : MonoBehaviour
             mainInventory.anchoredPosition = new Vector3(0, 44, 0);
             mainInventoryGroup.SetActive(false);
             isCraftingStationOpen = false;
-            player.speed = 10f;
+            player.speed = 5f;
         }
 }
